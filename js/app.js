@@ -20,3 +20,15 @@ document.getElementById('number-pad').addEventListener('click', function (event)
         preveusKeypadFild.value = preveusKeypadFild.value + keypress;
     }
 })
+
+function verefyPin() {
+    if (preveusKeypadFild.value == genaretedPinFildvalue.value) {
+        document.getElementById('match-section').style.display = "block";
+        document.getElementById('not-match-section').style.display = "none";
+
+    }
+    else {
+        document.getElementById('match-section').style.display = "none";
+        document.getElementById('not-match-section').style.display = "block";
+    }
+}
