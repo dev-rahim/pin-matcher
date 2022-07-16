@@ -11,8 +11,12 @@ const preveusKeypadFild = document.getElementById('keypad-output-fild');
 document.getElementById('number-pad').addEventListener('click', function (event) {
     const keypress = event.target.innerText;
     if (isNaN(keypress)) {
+        console.log(keypress);
         if (keypress == 'C') {
             preveusKeypadFild.value = '';
+        }
+        else if (keypress == '<') {
+            preveusKeypadFild.value = preveusKeypadFild.value.slice(0, -1);
         }
     }
     else {
